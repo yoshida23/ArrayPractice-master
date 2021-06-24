@@ -33,6 +33,10 @@ namespace ArrayPractice
 
             label1.Left += vx;
             label1.Top += vy;
+            label2.Left += vx;
+            label2.Top += vy;
+            label3.Left += vx;
+            label3.Top += vy;
 
             if (label1.Left < 0)
             {
@@ -50,6 +54,38 @@ namespace ArrayPractice
             {
                 vy = -Math.Abs(vy);
             }
+            if (label2.Left < 0)
+            {
+                vx = -Math.Abs(vx);
+            }
+            if (label2.Top < 0)
+            {
+                vy = -Math.Abs(vy);
+            }
+            if (label2.Right > ClientSize.Width)
+            {
+                vx = Math.Abs(vx);
+            }
+            if (label2.Bottom > ClientSize.Height)
+            {
+                vy = Math.Abs(vy);
+            }
+            if (label3.Left < 0)
+            {
+                vx = Math.Abs(vx);
+            }
+            if (label3.Top < 0)
+            {
+                vy = Math.Abs(vy);
+            }
+            if (label3.Right > ClientSize.Width)
+            {
+                vx = -Math.Abs(vx);
+            }
+            if (label3.Bottom > ClientSize.Height)
+            {
+                vy = -Math.Abs(vy);
+            }
 
             Point fpos = PointToClient(MousePosition);
 
@@ -60,6 +96,11 @@ namespace ArrayPractice
             {
                 timer1.Enabled = false;
             }
+        }
+
+private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
