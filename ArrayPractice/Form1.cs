@@ -60,35 +60,35 @@ namespace ArrayPractice
             }
             if (label2.Left < 0)
             {
-                vx = Math.Abs(vx);
+                vx2 = Math.Abs(vx2);
             }
             if (label2.Top < 0)
             {
-                vy = Math.Abs(vy);
+                vy2 = Math.Abs(vy2);
             }
             if (label2.Right > ClientSize.Width)
             {
-                vx = -Math.Abs(vx);
+                vx2 = -Math.Abs(vx2);
             }
             if (label2.Bottom > ClientSize.Height)
             {
-                vy = -Math.Abs(vy);
+                vy2 = -Math.Abs(vy2);
             }
             if (label3.Left < 0)
             {
-                vx = Math.Abs(vx);
+                vx3 = Math.Abs(vx3);
             }
             if (label3.Top < 0)
             {
-                vy = Math.Abs(vy);
+                vy3 = Math.Abs(vy3);
             }
             if (label3.Right > ClientSize.Width)
             {
-                vx = -Math.Abs(vx);
+                vx3 = -Math.Abs(vx3);
             }
             if (label3.Bottom > ClientSize.Height)
             {
-                vy = -Math.Abs(vy);
+                vy3 = -Math.Abs(vy3);
             }
 
             Point fpos = PointToClient(MousePosition);
