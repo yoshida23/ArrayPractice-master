@@ -16,6 +16,10 @@ namespace ArrayPractice
 
         int vx = rand.Next(-20, 21);
         int vy = rand.Next(-20, 21);
+        int vx2 = rand.Next(-20, 21);
+        int vy2 = rand.Next(-20, 21);
+        int vx3 = rand.Next(-20, 21);
+        int vy3 = rand.Next(-20, 21);
         int score = 100;
 
         public Form1()
@@ -33,10 +37,10 @@ namespace ArrayPractice
 
             label1.Left += vx;
             label1.Top += vy;
-            label2.Left += vx;
-            label2.Top += vy;
-            label3.Left += vx;
-            label3.Top += vy;
+            label2.Left += vx2;
+            label2.Top += vy2;
+            label3.Left += vx3;
+            label3.Top += vy3;
 
             if (label1.Left < 0)
             {
@@ -56,19 +60,19 @@ namespace ArrayPractice
             }
             if (label2.Left < 0)
             {
-                vx = -Math.Abs(vx);
+                vx = Math.Abs(vx);
             }
             if (label2.Top < 0)
             {
-                vy = -Math.Abs(vy);
+                vy = Math.Abs(vy);
             }
             if (label2.Right > ClientSize.Width)
             {
-                vx = Math.Abs(vx);
+                vx = -Math.Abs(vx);
             }
             if (label2.Bottom > ClientSize.Height)
             {
-                vy = Math.Abs(vy);
+                vy = -Math.Abs(vy);
             }
             if (label3.Left < 0)
             {
